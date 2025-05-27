@@ -1,1 +1,239 @@
+.product-tab-section {
+  background-color: #f8f9fa;
+  
+  .product-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      
+      .product-overlay {
+        opacity: 1;
+      }
+    }
+    
+    .product-image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px 8px 0 0;
+      
+      img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+      
+      .product-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        
+        .btn {
+          width: 40px;
+          height: 40px;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 5px;
+          
+          i {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    
+    .product-info {
+      .product-title {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        
+        a {
+          color: #333;
+          text-decoration: none;
+          
+          &:hover {
+            color: #007bff;
+          }
+        }
+      }
+      
+      .product-price {
+        .current-price {
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: #007bff;
+        }
+      }
+    }
+  }
+}
 
+.blog-section {
+  background-color: #f8f9fa;
+  
+  .section-header {
+    .section-title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+    
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: #666;
+    }
+  }
+  
+  .blog-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+      
+      .blog-image img {
+        transform: scale(1.1);
+      }
+      
+      .read-more {
+        color: #007bff;
+        
+        i {
+          transform: translateX(5px);
+        }
+      }
+    }
+    
+    .blog-image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px 10px 0 0;
+      
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+      
+      .blog-date {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: #007bff;
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 5px;
+        text-align: center;
+        
+        .day {
+          display: block;
+          font-size: 1.2rem;
+          font-weight: 600;
+          line-height: 1;
+        }
+        
+        .month {
+          font-size: 0.9rem;
+          text-transform: uppercase;
+        }
+      }
+    }
+    
+    .blog-content {
+      padding: 20px;
+      
+      .blog-meta {
+        margin-bottom: 10px;
+        
+        span {
+          font-size: 0.9rem;
+          color: #666;
+          margin-right: 15px;
+          
+          i {
+            margin-right: 5px;
+            color: #007bff;
+          }
+        }
+      }
+      
+      .blog-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        
+        a {
+          color: #333;
+          text-decoration: none;
+          
+          &:hover {
+            color: #007bff;
+          }
+        }
+      }
+      
+      .blog-excerpt {
+        font-size: 0.95rem;
+        color: #666;
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+      
+      .blog-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #eee;
+        
+        .read-more {
+          color: #333;
+          text-decoration: none;
+          font-weight: 500;
+          transition: all 0.3s ease;
+          
+          i {
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+          }
+        }
+        
+        .blog-stats {
+          span {
+            font-size: 0.9rem;
+            color: #666;
+            margin-left: 15px;
+            
+            i {
+              margin-right: 5px;
+              color: #007bff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
