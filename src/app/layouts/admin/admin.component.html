@@ -1,0 +1,54 @@
+<div class="admin-container">
+    <!-- Sidebar -->
+    <aside class="sidebar" [class.sidebar-collapsed]="!isSidebarOpen">
+        <div class="sidebar-header">
+            <h1>Admin Panel</h1>
+            <button class="toggle-btn" (click)="toggleSidebar()">
+                <span class="material-icons">{{ isSidebarOpen ? 'menu_open' : 'menu' }}</span>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul>
+                <li *ngFor="let item of menuItems">
+                    <a [routerLink]="item.path" routerLinkActive="active">
+                        <span class="material-icons">{{ item.icon }}</span>
+                        <span class="menu-label" *ngIf="isSidebarOpen">{{ item.label }}</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <button class="logout-btn">
+                <span class="material-icons">logout</span>
+                <span class="menu-label" *ngIf="isSidebarOpen">Logout</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Header -->
+        <header class="top-header">
+            <div class="header-left">
+                <button class="menu-toggle" (click)="toggleSidebar()">
+                    <span class="material-icons">menu</span>
+                </button>
+                <h2>Dashboard</h2>
+            </div>
+            <div class="header-right">
+                <div class="user-info">
+                    <span class="material-icons">notifications</span>
+                    <span class="material-icons">account_circle</span>
+                    <span class="username">Admin User</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content Area -->
+        <div class="content-area">
+            <router-outlet></router-outlet>
+        </div>
+    </main>
+</div>

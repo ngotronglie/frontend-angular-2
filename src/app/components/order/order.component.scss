@@ -1,0 +1,132 @@
+.order-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .order-header {
+    margin-bottom: 2rem;
+
+    h1 {
+      font-size: 2rem;
+      color: #333;
+      margin: 0;
+    }
+  }
+
+  .order-content {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+  }
+
+  .loading-spinner {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+  }
+
+  .no-orders {
+    text-align: center;
+    padding: 3rem;
+    color: #666;
+
+    .shop-now-btn {
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+
+  .orders-table {
+    overflow-x: auto;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+
+      th, td {
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+      }
+
+      th {
+        background-color: #f8f9fa;
+        font-weight: 600;
+        color: #495057;
+      }
+
+      tr:hover {
+        background-color: #f8f9fa;
+      }
+    }
+  }
+
+  .status-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+
+    &.status-completed {
+      background-color: #d4edda;
+      color: #155724;
+    }
+
+    &.status-processing {
+      background-color: #cce5ff;
+      color: #004085;
+    }
+
+    &.status-pending {
+      background-color: #fff3cd;
+      color: #856404;
+    }
+
+    &.status-cancelled {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+  }
+
+  .view-details-btn {
+    padding: 0.5rem 1rem;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #5a6268;
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .order-container {
+    padding: 1rem;
+
+    .orders-table {
+      table {
+        th, td {
+          padding: 0.75rem;
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+}
